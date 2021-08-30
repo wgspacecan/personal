@@ -63,6 +63,7 @@ namespace Checkers {
         void run() {
             reset();
             bool game_on = true;
+            std::cout << "hello";
             while(game_on) {
                 // player 1
                 // player 2
@@ -70,6 +71,8 @@ namespace Checkers {
                 // detect legal moves
                 // detect win/loss
                 // input can end game
+
+                return; // temp exit
             }
         }
     };
