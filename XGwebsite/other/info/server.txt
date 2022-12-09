@@ -1,0 +1,15 @@
+
+OS: Arch Linux
+
+Hardware:
+* Memory:
+    - amount: 2048 MB
+    - speed: 
+* CPU:
+    - cores: 2
+    - speed: 
+
+Services:
+* PHP 7
+* Apache 2
+* SQL MariaDB 10

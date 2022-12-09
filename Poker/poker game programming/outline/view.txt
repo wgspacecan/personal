@@ -1,0 +1,18 @@
+bet cycle player view
+-------------------------------------
+
+Player 4 					250 credits
+
+Hand: J Q
+      1 9
+
+Deck: A Q Q
+      7 8 8
+
+Table: 1 2 3 4 5 6
+       F B F * - -
+
+raised: 10 credits
+
+choose: fold(f), check(c), bet(b)
+choice: 

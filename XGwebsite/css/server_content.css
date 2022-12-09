@@ -1,0 +1,15 @@
+/* Content: server list - MOVE TO NEW FILE*/
+.content table {
+	border-collapse: collapse;
+}
+.content td, th {
+	border: 1px solid #2c2e24;
+	text-align: left;
+	padding: 8px;
+}
+.content tr:nth-child(even) {
+	background-color: #dddddd;
+}
+.content tr:nth-child(odd) {
+	background-color: #FFFFFF;
+}

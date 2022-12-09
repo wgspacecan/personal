@@ -1,4 +1,3 @@
-Personal Code Repo
+Personal Project Repo
 
-current projects
-- checkers
+all orginal code by William Gregory

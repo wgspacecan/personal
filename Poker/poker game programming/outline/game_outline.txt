@@ -1,0 +1,41 @@
+input: first player, board, players
+
+bet_cycle() {
+	show board, hand, name, balance, current unpaid bet, bets and folded status of table
+	choose bet, check, fold
+	
+	if fold
+		(players_remaining-1)
+		if players left == 1, exit
+		
+	if check
+		if unpaid debt try and pay
+			if fail, fold (players_remaining-1)
+		(payers_checked+1)
+		if players checked == players remaining, exit
+	if bet
+		get bet amount from player (redo if they can not pay)
+		(players_checked = 0)
+		(bet = bet + new_bet)
+}
+
+---
+
+round() {
+	deal hands to players
+	bet_cycle()
+	flop 1
+	bet_cycle()
+	flop 2
+	bet_cycle()
+	flop 3
+	bet_cycle()
+}
+
+---
+
+game() {
+	setup players
+	round()
+}
+	

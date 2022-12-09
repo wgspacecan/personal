@@ -1,0 +1,22 @@
+Player
+---
+public:
+	Player(unsigned int in_m, unsigned int in_id)  // setup money (0 for default), player ID
+	bool give_money(unsigned int in_m) // give money
+	void take_money(unsigned int in_m) // take money
+	void clear_hand(void)
+	void take_card(card in_c)
+	unsigned int return_id(void)
+	unsigned int return_balance(void)
+	void display_hand(void)
+	void display_info(void)
+
+Board
+---
+private:
+	void flop_once()
+	void discard_once()
+public:		
+	void set_deck(std::vector <card> in_d)  // new shuffled deck
+	void cycle(unsigned int in_c) // manages flop and discard
+	void display_board()

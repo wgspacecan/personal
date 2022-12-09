@@ -1,0 +1,74 @@
+Game
+only starts once.  main container for game which has many rounds
+
+Round
+deal a new deck and deal cards.  start a bet cycle for each flop
+
+Cycle
+loop through players who have not folded. (check, bet, fold)
+ends with each new flop until the end of a round when someone gets paid
+
+
+Dealer
+private:
+	Board board;					// the board
+	
+	std::vector <Player> players;	// all players
+	std::vector <unsigned int> players_remaining;	// location of players remaining - players.at().  ex (0,0,1,1)  only the 3rd and 4th player are still in the betting cycle
+	unsigned int player_count;		// count of players playing
+	
+	unsigned int current_player;	// player going first this round
+	unsigned int raised_by;			// current raise
+	std::vector <int> current_bets;	// each players current bet
+	
+	unsigned int current_round;		// current round
+	unsigned int current_cycle;		// current cycle, per round
+	
+	unsigned int ante_amount;		// ante amount to play
+	unsigned int blind_big;			// value of big blind
+	unsigned int blind_small;		// value of small blind
+	unsigned int max_round;			// max round (0 for no limit)
+	unsigned int fee_type;			// 0:none, 1: ante, 2: blind
+
+	bool player_wins;				// true if player has won round
+	
+	void setup_players(unsigned int in_pc)
+	void cards_to_players(void) 
+	bool check_winner()
+	void new_round()
+
+	void apply_blind(unsigned int in_p)
+	void apply_ante(void)
+	void apply_fee(unsigned int fee_type, unsigned int in_p) //in_p is optional
+	
+	// cycle all places for bet once
+	unsigned int all_bet(unsigned int lptr)
+	// waht
+	std::vector <unsigned int> bet_next(unsigned int lptp, unsigned int lptr)
+	// set players 'current_bet'
+	void set_players_bet(unsigned int in_p, unsigned int in_a)
+	// **
+	unsigned int get_bet(unsigned int in_p)
+	bool take_bet(unsigned int in_p)
+	void bet_cycle(bool in_n)
+	
+	unsigned int determine_position(unsigned int in_p, unsigned int in_i)
+	void update_current_player()
+	void reset_players_remaining()	// each round, everyone is back in
+	void remove_player(unsigned int in_p)	// after someone folds, remove them
+	
+	// display useful information to the player
+	void display_bet_menu(unsigned int in_p)
+	// menu to aid in transferring the device to another player
+	void transfer_device(void)
+	// display exit info
+	void display_exit()
+	// menu to enter desired player count
+	unsigned int get_player_count()
+	void display_useful_stats()
+	
+public:	
+	// settings setup
+	Dealer()
+	// main game loop
+	void play(int in_pc)

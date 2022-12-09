@@ -1,0 +1,38 @@
+/* 
+	unsigned int get_bet ( unsigned int )
+	
+	input: current player (uint)
+	output: bet amount (uint) (0 to wallet)
+
+	info: menu to enter bet amount
+*/
+unsigned int get_bet(unsigned int in_p)
+
+/*
+	bool take_bet( unsigned int )
+
+	input: current player position (uint)
+	output: raise updated (bool)
+
+	info: handle a single players bet.
+		- display bet menu
+		- get bet amount (optional)
+		- remove if fail previous raise (action: fold)
+		- transfer to next player
+
+*/
+bool take_bet(unsigned int in_p)
+
+/*
+	void bet_cycle( bool )
+
+	input: if new round
+	output: NA
+
+	info: manages the main game loop
+		- ante and blind
+		- all betting
+		- returns after round is complete
+
+*/
+void bet_cycle(bool in_n)
