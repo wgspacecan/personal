@@ -11,6 +11,6 @@ ProjectZero - Graduate Research - AI Investigation - Neural Network - Training
 
 ConwayGameLife
 
-TicTacToe
+GridSpace
 
 Bank
