@@ -36,7 +36,7 @@ namespace Conway {
                 if (in_nc == 3) alive = true;
             }
         }
-        bool set_state(bool in_s) {
+        void set_state(bool in_s) {
             alive = in_s;
         }
         bool return_state() {
